@@ -1,0 +1,12 @@
+FROM eclipse-temurin:21-jdk-alpine
+
+# Установка docker-клиента
+RUN apk update && apk add --no-cache docker-cli
+
+WORKDIR /app
+
+COPY target/manager-0.0.1-SNAPSHOT.jar manager.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "/app/manager.jar"]
