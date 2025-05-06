@@ -30,3 +30,9 @@
 - Maven
 - Docker
 - Docker Compose v2+
+
+### Клонирование репозитория и запуск
+```bash
+git clone https://github.com/yzavorotkina/fault-tolerance.git
+
+docker compose up --build -d
